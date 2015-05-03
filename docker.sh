@@ -39,11 +39,11 @@ echo -ne "Starting ${LABEL} ... "
 
 OPTS=""
 
-if [ -z "$PORT" ]; then
+if [ -n "$PORT" ]; then
 	OPTS="$OPTS -p ${PORT}:27017"
 fi
 
-if [ -z "$VOLUME" ]; then
+if [ -n "$VOLUME" ]; then
         OPTS="$OPTS -v ${VOLUME}:/data/db"
 fi
 
