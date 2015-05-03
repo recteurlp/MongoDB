@@ -21,14 +21,16 @@ vi docker.sh
 
 ## Edit variables name
 
+Allow port on host, uncomment the following :
+
 ```bash
-##############
-NAME="mongodb"
-LABEL="MongoDB"
-REPO="recteurlp"
 #PORT="27017"
+```
+
+Persistent Volume :
+
+```bash
 VOLUME="/data/mongodb"
-##############
 ```
 
 # Running Container
