@@ -9,4 +9,4 @@ RUN yum -y update && \
 VOLUME ["/data/db"]
 
 EXPOSE 27017
-ENTRYPOINT ["/usr/bin/mongod"]
+CMD ["/usr/bin/mongod"]
