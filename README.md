@@ -33,6 +33,12 @@ Persistent Volume :
 VOLUME="/data/mongodb"
 ```
 
+You may need to run the following command if you using docker > 1.6
+
+```bash
+chcon -Rt svirt_sandbox_file_t /data/mongodb
+```
+
 # Running Container
 
 ## To Build and Start
