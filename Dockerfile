@@ -1,12 +1,12 @@
-FROM fedora:21
+FROM fedora:22
 MAINTAINER recteurlp@gmail.com
 
-RUN yum -y update && \
- yum -y install mongodb-server && yum clean all && \
+RUN dnf -y update && \
+ dnf -y install mongodb-server && dnf clean all && \
  mkdir -p /data/db && \
- sed -i 's/dbpath =\/var\/lib\/mongodb/dbpath =\/data\/db/' /etc/mongodb.conf
+ sed -i 's/dbpath =\/var\/lib\/mongodb/dbpath =\/data\/db/' /etc/mongod.conf
 
 VOLUME ["/data/db"]
 
 EXPOSE 27017
-CMD ["/usr/bin/mongod"]
+ENTRYPOINT ["/usr/bin/mongod"]
