@@ -1,8 +1,7 @@
-FROM fedora:22
+FROM fedora:23
 MAINTAINER recteurlp@gmail.com
 
-RUN dnf -y update && \
- dnf -y install mongodb-server && dnf clean all && \
+RUN dnf -y install mongodb-server && dnf clean all && \
  mkdir -p /data/db && \
  sed -i 's/dbpath =\/var\/lib\/mongodb/dbpath =\/data\/db/' /etc/mongod.conf
 

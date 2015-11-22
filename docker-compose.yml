@@ -1,0 +1,7 @@
+MongoDB:
+ image: recteurlp/mongodb
+ container_name: mongodb
+ ports:
+  - 27017:27017
+ volumes:
+  - /data/db
