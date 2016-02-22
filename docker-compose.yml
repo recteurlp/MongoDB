@@ -3,5 +3,5 @@ MongoDB:
  container_name: mongodb
  ports:
   - 27017:27017
- volumes:
-  - /data/db
+# volumes:
+#  - /var/lib/mongodb
