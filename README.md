@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/recteurlp/mongodb:latest.svg)](https://imagelayers.io/?images=recteurlp/mongodb:latest)
+
 recteurlp/mongodb:3.0.8-1
 =========================
 
