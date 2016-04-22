@@ -1,6 +1,4 @@
-[![](https://badge.imagelayers.io/recteurlp/mongodb:latest.svg)](https://imagelayers.io/?images=recteurlp/mongodb:latest)
-
-recteurlp/mongodb:3.0.8-1
+recteurlp/mongodb:3.0.11-13.0.11-1
 =========================
 
 Fedora DockerFile for MongoDB
@@ -10,7 +8,7 @@ Read instruction below
 # To Build
 
 ```bash
-git clone https://keep-it.fr/gitlab/docker/MongoDB.git
+git clone https://pyrmin.io/gitlab/docker/MongoDB.git
 cd MongoDB
 make
 ```
