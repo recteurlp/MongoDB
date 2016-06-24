@@ -1,7 +1,10 @@
-FROM fedora:23
+FROM fedora:24
 MAINTAINER recteurlp@gmail.com
 
-RUN dnf -y install mongodb-server mongodb && dnf clean all
+RUN dnf -y -v --refresh install \
+ mongodb-server \
+ mongodb \
+ && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/*
 
 VOLUME ["/var/lib/mongodb"]
 
