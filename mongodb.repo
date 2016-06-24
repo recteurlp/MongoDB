@@ -1,0 +1,5 @@
+[mongodb-org-testing]
+name=MongoDB Testing Repository
+baseurl=https://repo.mongodb.org/yum/redhat/7Server/mongodb-org/testing/$basearch/
+gpgcheck=0
+enabled=1

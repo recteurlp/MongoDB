@@ -1,12 +1,19 @@
 FROM fedora:24
 MAINTAINER recteurlp@gmail.com
 
-RUN dnf -y -v --refresh install \
- mongodb-server \
- mongodb \
+COPY mongodb.repo /etc/yum.repos.d/
+
+ENV TERM xterm
+
+RUN dnf -v -y --refresh install \
+ mongodb-org-unstable-server \
+ mongodb-org-unstable-shell \
+ mongodb-org-unstable-tools \
+ mongodb-org-unstable-mongos \
+ mongodb-org-unstable \
  && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/*
 
-VOLUME ["/var/lib/mongodb"]
+VOLUME ["/data/db"]
 
 EXPOSE 27017
 ENTRYPOINT ["/usr/bin/mongod"]

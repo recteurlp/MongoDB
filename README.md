@@ -1,7 +1,7 @@
-recteurlp/mongodb:3.2.6-4
-==========================
+recteurlp/mongodb-testing:3.3.8-1
+=================================
 
-Fedora DockerFile for MongoDB
+Fedora DockerFile for MongoDB Dev Release
 
 Read instruction below
 
@@ -9,14 +9,13 @@ Read instruction below
 
 ```bash
 git clone https://pyrmin.io/gitlab/docker/MongoDB.git
-cd MongoDB
+cd MongoDB-testing
+git checkout -b devel
 make
 ```
 
-You may need to run the following command if you using docker > 1.6
-
 ```bash
-chcon -Rt svirt_sandbox_file_t /data/mongodb
+chcon -Rt svirt_sandbox_file_t /data/db
 ```
 # Running Container
 
@@ -27,5 +26,5 @@ docker-compose up
 
 # Persistance
 
-enable volume /var/lib/mongodb
+uncomment volume /data/db in docker-compose file
 
