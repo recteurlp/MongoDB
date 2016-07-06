@@ -1,5 +1,5 @@
 mongodb:
- image: recteurlp/mongodb-testing:3.3.8-1
+ image: recteurlp/mongodb-testing:3.3.9-1
  container_name: mongodb
  ports:
   - 27017:27017
