@@ -6,7 +6,7 @@ RUN dnf -y -v --refresh install \
  mongodb \
  && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/*
 
-VOLUME ["/var/lib/mongodb"]
+VOLUME ["/data/db"]
 
 EXPOSE 27017
 ENTRYPOINT ["/usr/bin/mongod"]
