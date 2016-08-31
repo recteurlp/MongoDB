@@ -1,6 +1,8 @@
 mongodb:
- image: recteurlp/mongodb-testing:3.3.9-1
+ image: recteurlp/mongodb-testing:3.3.11-0
  container_name: mongodb
+ environment:
+  - ENABLE_AUTH: "false"
  ports:
   - 27017:27017
  volumes:

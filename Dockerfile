@@ -13,7 +13,9 @@ RUN dnf -v -y --refresh install \
  mongodb-org-unstable \
  && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/*
 
+COPY entrypoint.sh /entrypoint.sh
+
 VOLUME ["/data/db"]
 
 EXPOSE 27017
-ENTRYPOINT ["/usr/bin/mongod"]
+ENTRYPOINT ["/entrypoint.sh"]
