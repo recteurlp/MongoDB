@@ -2,6 +2,7 @@ FROM fedora:24
 MAINTAINER recteurlp@gmail.com
 
 COPY mongodb.repo /etc/yum.repos.d/
+COPY entrypoint.sh /entrypoint.sh
 
 ENV TERM xterm
 
@@ -11,9 +12,8 @@ RUN dnf -v -y --refresh install \
  mongodb-org-unstable-tools \
  mongodb-org-unstable-mongos \
  mongodb-org-unstable \
- && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/*
-
-COPY entrypoint.sh /entrypoint.sh
+ && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/* \
+ && chmod +x /entrypoint.sh
 
 VOLUME ["/data/db"]
 
