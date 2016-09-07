@@ -1,4 +1,4 @@
-recteurlp/mongodb:3.2.7-1
+recteurlp/mongodb:3.2.8-1
 ==========================
 
 Fedora DockerFile for MongoDB
@@ -27,5 +27,5 @@ docker-compose up
 
 # Persistance
 
-enable volume /var/lib/mongodb
+enable volume /data/db
 

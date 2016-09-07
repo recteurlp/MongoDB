@@ -4,4 +4,4 @@ MongoDB:
  ports:
   - 27017:27017
 # volumes:
-#  - /var/lib/mongodb
+#  - /var/lib/mongodb:/data/db
