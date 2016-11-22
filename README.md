@@ -1,4 +1,4 @@
-recteurlp/mongodb-testing:3.3.11-0
+recteurlp/mongodb-testing:3.4.0-0.1.rc4
 =================================
 
 Fedora DockerFile for MongoDB Dev Release
