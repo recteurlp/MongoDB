@@ -1,4 +1,4 @@
-FROM fedora:25
+FROM fedora:27
 MAINTAINER recteurlp@gmail.com
 
 RUN dnf -y -v --refresh install \

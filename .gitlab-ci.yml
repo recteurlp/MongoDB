@@ -2,6 +2,6 @@ Build docker image:
   tags:
    - docker
   script:
-   - make build CI_BUILD_TAG=${CI_BUILD_TAG:-latest}
+   - make build CI_JOB_TAG=${CI_JOB_TAG:-latest}
    - docker-clean
-   - sudo /usr/bin/docker push pyrmin.io:5000/mongodb:${CI_BUILD_TAG:-latest}
+   - docker push pyrmin.io/mongodb:${CI_JOB_TAG:-latest}
