@@ -1,6 +1,8 @@
 FROM fedora:27
 MAINTAINER recteurlp@gmail.com
 
+ENV TERM xterm
+
 RUN dnf -y -v --refresh install \
  mongodb-server \
  mongodb \
