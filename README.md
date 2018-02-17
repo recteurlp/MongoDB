@@ -1,5 +1,5 @@
-recteurlp/mongodb:3.4.6-2
-=========================
+recteurlp/mongodb:3.4.10-1
+==========================
 
 Fedora DockerFile for MongoDB
 
