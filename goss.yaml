@@ -2,7 +2,7 @@ package:
   mongodb:
     installed: true
     versions:
-    - 3.4.10
+    - 3.4.11
 process:
   mongod:
     running: true
