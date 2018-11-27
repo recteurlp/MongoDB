@@ -1,4 +1,4 @@
-FROM fedora:28
+FROM fedora:29
 MAINTAINER recteurlp@gmail.com
 
 ENV TERM xterm
