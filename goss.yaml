@@ -1,8 +1,8 @@
 package:
-  mongodb:
+  mongodb-org-server:
     installed: true
     versions:
-    - 4.0.1
+    - 4.0.6
 process:
   mongod:
     running: true
