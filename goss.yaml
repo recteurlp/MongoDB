@@ -2,7 +2,7 @@ package:
   mongodb-org-server:
     installed: true
     versions:
-    - 4.2.3
+    - 4.4.4
 process:
   mongod:
     running: true
