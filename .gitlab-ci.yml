@@ -1,22 +1,9 @@
-stages:
-  - test
-  - build
-
-Docker Goss Tests:
-  stage: test
-  tags:
-    - goss
-  script:
-    - make goss
-
 Build docker image:
-  stage: build
   tags:
-   - docker
+   - podman
   script:
    - make build CI_COMMIT_TAG=${CI_COMMIT_TAG:-latest}
-   - docker-clean
-   - docker push pyrmin.io/mongodb:${CI_COMMIT_TAG:-latest}
+   - buildah push --authfile ~/.auth.json docker.io/recteurlp/mongodb:${CI_COMMIT_TAG:-latest}
   only:
     - master
     - tags

@@ -1,5 +1,5 @@
 MongoDB:
- image: recteurlp/mongodb
+ image: docker.io/pyrmin/mongodb
  container_name: mongodb
  ports:
   - 27017:27017

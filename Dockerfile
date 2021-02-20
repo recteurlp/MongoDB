@@ -1,11 +1,11 @@
-FROM fedora:31
+FROM registry.fedoraproject.org/fedora:33
 MAINTAINER recteurlp@gmail.com
 
 ENV TERM xterm
 
 ADD mongodb.repo /etc/yum.repos.d/
 
-RUN rpmkeys --import https://www.mongodb.org/static/pgp/server-4.0.asc \
+RUN rpmkeys --import https://www.mongodb.org/static/pgp/server-4.4.asc \
  && dnf -y -v --refresh install \
  mongodb-org-server \
  mongodb-org-shell \
